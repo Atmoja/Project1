@@ -1,0 +1,255 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+#main{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(-45deg,rgb(91, 91, 248),rgb(136, 92, 179),purple);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 15px;
+}
+
+/* 🔹 Header Section */
+#head {
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    position: relative;
+}
+
+#logo {
+    width: 10%;
+    height: 10vh;
+    margin-right: 20px;
+}
+
+#logo img {
+    width: 70%;
+    height: 150%;
+}
+
+#head-text {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+    justify-content: center;
+    flex: 1; 
+    margin-left: 200px; 
+}
+
+#head h1 {
+    font-size: 55px;
+    font-style: italic;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#head h3 {
+    font-style: italic;
+    font-weight: bold;
+    padding-left: 100px;
+}
+
+/* 🔹 Main Weather Section */
+#part {
+    width: 95%;
+    height: 80vh;
+    background-color: rgba(96, 8, 103, 0.655);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    column-gap: 20px;
+}
+
+/* 🔹 Left Section (Search and Current Weather) */
+#part1 {
+    width: 55%;
+    height: 75vh;
+    border-radius: 20px;
+    display: flex;
+    text-align: center;
+}
+
+.container {
+    background: rgba(128, 33, 79, 0.4);
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+}
+
+
+input {
+    width: 80%;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+button {
+    display: block; 
+    margin: 10px auto; 
+    padding: 10px 20px;
+    background: #650bae;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #22a1a1;
+}
+
+
+/* 🔹 Weather Result Styling in Part 1 */
+#weatherResult {
+    margin-top: 15px;
+    font-size: 18px;  /* Bigger text */
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+/* 🔹 Weather Image */
+#weatherImage {
+    width: 130px;  /* Slightly smaller */
+    height: 130px;
+    margin-top: 10px;
+}
+
+/* 🔹 Animated Weather Title */
+.container h5 {
+    font-size: 40px; /* Reduced size */
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    animation: floatEffect 3s ease-in-out infinite;
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fad0c4, #ffdde1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* 🔹 Placeholder before search */
+#part2-placeholder {
+    text-align: center;
+    font-size: 25px; /* Reduced size */
+    font-weight: bold;
+    opacity: 0.9;
+    animation: glowEffect 1.5s ease-in-out infinite alternate;
+    background: linear-gradient(45deg, #fff, #f7d794, #f8a5c2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#part2-placeholder img {
+    width: 200px; /* Adjusted size */
+    height: 180px;
+    margin-bottom: 10px;
+    animation: floatEffect 3s ease-in-out infinite;
+}
+
+/* 🔹 Right Section (7-Day Forecast) */
+#part2 {
+    width: 40%;
+    height: 75vh;
+    background-color: rgba(137, 43, 226, 0.365);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+    overflow: hidden;
+    gap: 5px;
+}
+
+/* 🔹 Selected Day Details */
+#dayDetails {
+    order: -1;
+    text-align: center;
+    width: 100%;
+    font-size: 14px; /* Reduced */
+    background: rgba(255, 255, 255, 0.3);
+    padding: 8px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+#dayDetails img {
+    width: 60px; /* Slightly reduced */
+    height: 60px;
+}
+
+/* 🔹 Forecast Instruction */
+#forecast-instruction {
+    font-size: 12px; /* Reduced */
+    font-weight: bold;
+    color: white;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+/* 🔹 7-Day Forecast Grid */
+.forecast-container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    width: 100%;
+    text-align: center;
+}
+
+/* 🔹 Forecast Items */
+.forecast-item {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 5px; /* Adjusted */
+    border-radius: 6px;
+    font-size: 12px; /* Slightly reduced */
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.forecast-item:hover {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* 🔹 Increased Forecast Icons */
+.forecast-item img {
+    width: 40px; /* Reduced */
+    height: 40px;
+}
+
+/* 🔹 Floating Animation */
+@keyframes floatEffect {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); } /* Smaller movement */
+    100% { transform: translateY(0px); }
+}
+
+/* 🔹 Glow Effect */
+@keyframes glowEffect {
+    0% { opacity: 0.8; }
+    100% { opacity: 1; }
+}

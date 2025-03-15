@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="main">
+        <div id="head">
+            <div id="logo">
+                <img src="smoke.png" alt="Logo">
+            </div>            
+            <div id="head-text">
+                <h1>Weather Forecasting App</h1>
+                <h3>Forecasting Weather of Any City of the World!</h3>
+            </div>
+        </div>
+        <div id="part">
+            <div id="part1">
+                <div class="container">
+                    <h5>Welcome to Next-Gen Forcast</h5>
+                    <input type="text" id="location" placeholder="Enter city name">
+                    <button onclick="getWeather()">Get Weather</button>
+                    <div id="weatherResult"></div>
+                </div>
+            </div>
+            <div id="part2">
+                <div id="forecastResult"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
