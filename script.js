@@ -5,7 +5,7 @@ function getWeather() {
         return;
     }
 
-    let apiKey = "2f8b66fdaf5f438cb4260019251403"; // Your API key
+    let apiKey = "Your API key"
     let url = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${location}&aqi=yes`;
 
     fetch(url)
@@ -35,7 +35,7 @@ function getWeather() {
 }
 
 function get7DayForecast(location) {
-    let apiKey = "2f8b66fdaf5f438cb4260019251403"; // Your API key
+    let apiKey = "Your API key"
     let url = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${location}&days=7&aqi=no&alerts=no`;
 
     fetch(url)
